@@ -9,8 +9,8 @@ export interface Props {
 const {
   title,
   description,
-  canonical = 'https://avicontrol.app',
-  ogImage = 'https://avicontrol.app/og-image.png',
+  canonical = 'https://miagrogesion.com',
+  ogImage = 'https://miagrogesion.com/og-image.png',
 } = Astro.props;
 ---
 
@@ -38,20 +38,26 @@ const {
     <!-- SEO primario -->
     <title>{title}</title>
     <meta name="description" content={description} />
+    <meta name="keywords" content="software granja avícola, control postura gallinas ponedoras, software avicultura Peru, gestión granja huevos, software para granjas de gallinas, porcentaje postura, registro producción huevos, granja ponedoras" />
     <link rel="canonical" href={canonical} />
     <meta name="robots" content="index, follow" />
     <meta name="language" content="es-419" />
     <meta name="geo.region" content="PE" />
     <meta name="geo.placename" content="Peru" />
+    <meta name="application-name" content="MiAgroGestion" />
+    <meta name="author" content="MiAgroGestion" />
 
-    <!-- Open Graph -->
+    <!-- Open Graph (WhatsApp, Facebook, LinkedIn) -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content={canonical} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:image" content={ogImage} />
+    <meta property="og:image:secure_url" content={ogImage} />
+    <meta property="og:image:type" content="image/png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="MiAgroGestion — Software para granjas de gallinas ponedoras" />
     <meta property="og:locale" content="es_PE" />
     <meta property="og:site_name" content="MiAgroGestion" />
 
