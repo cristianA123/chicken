@@ -10,11 +10,11 @@
           <path d="M12 6C12 6 13 7.5 13 9C13 10.5 12 11 12 11C12 11 11 10.5 11 9C11 7.5 12 6 12 6Z" fill="#16a34a"/>
         </svg>
       </div>
-      <span class="font-bold text-xl text-slate-900 dark:text-white">Avi<span class="text-brand-600">Control</span></span>
+      <span class="font-extrabold text-xl text-slate-900 dark:text-white">MiAgroGestion</span>
     </a>
 
     <!-- Nav links (desktop) -->
-    <ul class="hidden md:flex items-center gap-6 text-sm font-medium text-slate-600 dark:text-slate-300">
+    <ul class="hidden md:flex items-center gap-6 text-sm font-medium text-slate-600 dark:text-slate-400">
       <li><a href="#funcionalidades" class="hover:text-brand-600 dark:hover:text-brand-400 transition-colors cursor-pointer">Funcionalidades</a></li>
       <li><a href="#como-funciona" class="hover:text-brand-600 dark:hover:text-brand-400 transition-colors cursor-pointer">Cómo funciona</a></li>
       <li><a href="#precios" class="hover:text-brand-600 dark:hover:text-brand-400 transition-colors cursor-pointer">Precios</a></li>
@@ -27,26 +27,24 @@
       <button
         id="theme-toggle"
         aria-label="Cambiar tema"
-        class="w-9 h-9 flex items-center justify-center rounded-lg border border-slate-200 dark:border-slate-700 text-slate-500 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors cursor-pointer"
+        class="w-9 h-9 flex items-center justify-center rounded-lg border border-slate-200 dark:border-slate-800 text-slate-500 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-900 transition-colors cursor-pointer"
       >
-        <!-- Sol (visible en dark mode) -->
         <svg id="icon-sun" class="hidden dark:block w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/>
         </svg>
-        <!-- Luna (visible en light mode) -->
         <svg id="icon-moon" class="block dark:hidden w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/>
         </svg>
       </button>
 
-      <a href="https://app.avicontrol.app/login" class="hidden sm:inline text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors cursor-pointer">
+      <a href="https://app.miagrogesion.com/login" class="hidden sm:inline text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-brand-600 dark:hover:text-brand-400 transition-colors cursor-pointer">
         Iniciar sesión
       </a>
       <a
-        href="https://app.avicontrol.app/registro"
-        class="bg-brand-600 hover:bg-brand-700 text-white text-sm font-semibold px-4 py-2 rounded-lg transition-colors cursor-pointer"
+        href="https://app.miagrogesion.com/registro"
+        class="bg-brand-600 hover:bg-brand-700 text-white text-sm font-semibold px-4 py-2 rounded-xl transition-colors cursor-pointer"
       >
-        Comenzar gratis
+        Prueba gratis
       </a>
     </div>
   </nav>
@@ -56,7 +54,7 @@
   document.getElementById('theme-toggle')?.addEventListener('click', function () {
     var html = document.documentElement;
     var isDark = html.classList.toggle('dark');
-    localStorage.setItem('theme', isDark ? 'dark' : 'light');
+    localStorage.setItem('mag_theme', isDark ? 'dark' : 'light');
     var meta = document.getElementById('theme-color-meta');
     if (meta) meta.setAttribute('content', isDark ? '#0f172a' : '#ffffff');
   });

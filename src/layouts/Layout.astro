@@ -21,7 +21,7 @@ const {
     <script is:inline>
       (function () {
         try {
-          const stored = localStorage.getItem('theme');
+          const stored = localStorage.getItem('mag_theme');
           const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
           if (stored === 'dark' || (!stored && prefersDark)) {
             document.documentElement.classList.add('dark');
@@ -53,7 +53,7 @@ const {
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta property="og:locale" content="es_PE" />
-    <meta property="og:site_name" content="AviControl" />
+    <meta property="og:site_name" content="MiAgroGestion" />
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
@@ -70,33 +70,41 @@ const {
       {
         "@context": "https://schema.org",
         "@type": "SoftwareApplication",
-        "name": "AviControl",
+        "name": "MiAgroGestion",
         "applicationCategory": "BusinessApplication",
         "operatingSystem": "Web, Android, iOS",
         "offers": [
           {
             "@type": "Offer",
-            "name": "Plan Gratis",
+            "name": "Plan Prueba",
             "price": "0",
-            "priceCurrency": "USD"
+            "priceCurrency": "PEN",
+            "description": "14 días gratis sin tarjeta"
           },
           {
             "@type": "Offer",
             "name": "Plan Productor",
-            "price": "15",
-            "priceCurrency": "USD",
+            "price": "49",
+            "priceCurrency": "PEN",
             "billingIncrement": "P1M"
           },
           {
             "@type": "Offer",
             "name": "Plan Profesional",
-            "price": "40",
-            "priceCurrency": "USD",
+            "price": "99",
+            "priceCurrency": "PEN",
+            "billingIncrement": "P1M"
+          },
+          {
+            "@type": "Offer",
+            "name": "Plan Empresa",
+            "price": "199",
+            "priceCurrency": "PEN",
             "billingIncrement": "P1M"
           }
         ],
-        "description": "Software SaaS para granjas de gallinas ponedoras. Control de postura, gestión de lotes, galpones, ventas de huevos y análisis de rentabilidad.",
-        "url": "https://avicontrol.app",
+        "description": "Software SaaS para granjas de gallinas ponedoras en Latinoamérica. Control de postura, registro diario, ventas de huevos, gastos e inventario desde el celular.",
+        "url": "https://miagrogesion.com",
         "inLanguage": "es-419",
         "audience": {
           "@type": "Audience",
@@ -104,11 +112,12 @@ const {
         },
         "featureList": [
           "Control de porcentaje de postura",
-          "Gestión de lotes y galpones",
-          "Registro diario de producción",
-          "Ventas de huevos y facturación",
-          "Alertas por WhatsApp",
-          "Dashboard de rentabilidad"
+          "Registro diario de producción por turno",
+          "Gestión de lotes, galpones y granjas",
+          "Ventas de huevos por talla y unidad",
+          "Control de gastos e inventario",
+          "Dashboard con KPIs en tiempo real",
+          "Alertas automáticas de stock y producción"
         ]
       }
     </script>
@@ -118,13 +127,14 @@ const {
       {
         "@context": "https://schema.org",
         "@type": "Organization",
-        "name": "AviControl",
-        "url": "https://avicontrol.app",
-        "logo": "https://avicontrol.app/logo.svg",
+        "name": "MiAgroGestion",
+        "url": "https://miagrogesion.com",
+        "logo": "https://miagrogesion.com/logo.svg",
         "sameAs": [],
         "contactPoint": {
           "@type": "ContactPoint",
           "contactType": "customer support",
+          "telephone": "+51955497368",
           "availableLanguage": "Spanish"
         }
       }

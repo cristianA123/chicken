@@ -3,37 +3,37 @@ const features = [
   {
     icon: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg>`,
     title: 'Control de % postura en tiempo real',
-    desc: 'Calcula automáticamente el porcentaje de postura diario (huevos ÷ gallinas vivas). Ve la tendencia de tu lote y detecta caídas antes de que se vuelvan un problema.',
+    desc: 'Calcula automáticamente huevos ÷ gallinas vivas × 100. Ve la tendencia de cada lote y detecta caídas antes de que se conviertan en pérdidas.',
     highlight: true,
   },
   {
-    icon: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="M12 11h4"/><path d="M12 16h4"/><path d="M8 11h.01"/><path d="M8 16h.01"/></svg>`,
-    title: 'Registro diario rápido',
-    desc: 'Registra producción, mortalidad, alimento y agua en menos de 30 segundos desde tu celular. Funciona incluso sin conexión a internet.',
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="8" height="4" x="8" y="2" rx="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="M12 11h4M12 16h4M8 11h.01M8 16h.01"/></svg>`,
+    title: 'Registro diario por turno',
+    desc: 'Registra huevos por turno (mañana/tarde), mortalidad, alimento y agua en menos de 30 segundos. Funciona sin internet.',
     highlight: false,
   },
   {
-    icon: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.15 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.06 1.2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.09 8.19a16 16 0 0 0 5.72 5.72l1.26-1.26a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21 15z"/></svg>`,
-    title: 'Alertas por WhatsApp',
-    desc: 'Recibe notificaciones automáticas en WhatsApp cuando el porcentaje de postura cae, hay alta mortalidad o el inventario de alimento está bajo.',
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>`,
+    title: 'Dashboard con KPIs del mes',
+    desc: 'Huevos producidos, ingresos, utilidad neta y lotes activos en una sola pantalla. Gráfico de 30 días para ver tendencias.',
     highlight: false,
   },
   {
     icon: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"/></svg>`,
-    title: 'Gestión de ventas de huevos',
-    desc: 'Registra ventas por placas, docenas o unidades. Lleva el control de tus clientes, precios por talla (jumbo, extra grande, grande, mediano) y cobros pendientes.',
+    title: 'Ventas por talla y unidad',
+    desc: 'Registra ventas de huevos en Placas, Docenas o Unidades. Por talla: Jumbo, Grande, Mediano y Descarte. Control de clientes y cobros.',
+    highlight: false,
+  },
+  {
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>`,
+    title: 'Alertas automáticas de stock',
+    desc: 'Recibe alertas cuando el inventario de alimento, medicina o insumos cae por debajo del mínimo. Sin sorpresas.',
     highlight: false,
   },
   {
     icon: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>`,
-    title: 'Rentabilidad por gallina',
-    desc: '¿Estás ganando o perdiendo? Ve cuánto produces y gastas por gallina cada mes. Controla alimento, medicamentos, mano de obra y otros costos.',
-    highlight: false,
-  },
-  {
-    icon: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9h18v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9Z"/><path d="m3 9 2.45-4.9A2 2 0 0 1 7.24 3h9.52a2 2 0 0 1 1.8 1.1L21 9"/><path d="M12 3v6"/></svg>`,
-    title: 'Multi-granja y multi-galpón',
-    desc: 'Gestiona todas tus granjas y galpones desde un solo lugar. Compara el rendimiento entre lotes y toma decisiones con datos reales.',
+    title: 'Rentabilidad real por galpón',
+    desc: 'Controla gastos de alimento, medicina, mano de obra y transporte. Calcula tu utilidad neta y costo por huevo cada mes.',
     highlight: false,
   },
 ];
@@ -43,10 +43,10 @@ const features = [
     <div class="text-center max-w-2xl mx-auto mb-14">
       <p class="text-brand-600 dark:text-brand-400 font-semibold text-sm uppercase tracking-wider mb-3">Funcionalidades</p>
       <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white mb-4 text-balance">
-        Todo lo que necesita tu granja avícola
+        Todo lo que necesita tu granja en un solo lugar
       </h2>
       <p class="text-slate-600 dark:text-slate-400 text-lg">
-        Diseñado para granjeros, no para contadores. Simple de usar, potente para tu negocio.
+        11 módulos integrados. Diseñado para operadores de campo, no para contadores.
       </p>
     </div>
 
@@ -54,13 +54,13 @@ const features = [
       {features.map((f) => (
         <div class={`rounded-2xl p-6 border transition-shadow hover:shadow-md ${
           f.highlight
-            ? 'bg-brand-600 border-brand-700 text-white'
+            ? 'bg-brand-600 border-brand-700'
             : 'bg-white dark:bg-slate-900 border-slate-100 dark:border-slate-800'
         }`}>
           <div class={`w-11 h-11 rounded-xl flex items-center justify-center mb-4 ${
             f.highlight
-              ? 'bg-white/20'
-              : 'bg-brand-50 dark:bg-brand-900/30 text-brand-600 dark:text-brand-400'
+              ? 'bg-white/20 text-white'
+              : 'bg-brand-50 dark:bg-brand-600/20 text-brand-600 dark:text-brand-400'
           }`}>
             <Fragment set:html={f.icon} />
           </div>

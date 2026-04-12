@@ -1,36 +1,36 @@
 ---
 const faqs = [
   {
-    q: '¿Necesito internet para usar AviControl?',
+    q: '¿Necesito internet para usar MiAgroGestion?',
     a: 'Para el registro diario puedes trabajar sin conexión y los datos se sincronizan automáticamente cuando vuelves a tener señal. El dashboard y reportes requieren conexión.',
   },
   {
-    q: '¿Puedo usar AviControl desde mi celular?',
-    a: 'Sí, está diseñado mobile-first. Funciona en cualquier celular Android o iPhone desde el navegador, sin necesidad de descargar ninguna app.',
+    q: '¿Puedo usarlo desde mi celular?',
+    a: 'Sí, está diseñado mobile-first. Funciona en cualquier celular Android o iPhone desde el navegador, sin descargar ninguna app.',
   },
   {
-    q: '¿Qué tan difícil es empezar a usarlo?',
-    a: 'En menos de 5 minutos puedes tener tu primera granja configurada. Solo necesitas ingresar el nombre de tu granja, los galpones y la cantidad de gallinas por lote. No necesitas saber de tecnología.',
+    q: '¿Qué incluye la prueba de 14 días?',
+    a: 'Todo: 3 granjas, 15 galpones, 20 lotes activos, 5 usuarios y todos los módulos (producción, ventas, gastos, inventario, clientes, reportes). Sin límites ni funciones bloqueadas.',
   },
   {
-    q: '¿Puedo cambiar de plan o cancelar cuando quiera?',
-    a: 'Sí, sin contratos ni penalidades. Puedes subir, bajar o cancelar tu plan en cualquier momento desde tu cuenta. Si cancelas, tus datos se mantienen por 90 días.',
+    q: '¿Qué pasa cuando termina la prueba?',
+    a: 'Puedes elegir el plan que mejor se adapta a tu granja. Si no contratas, tus datos se conservan 90 días por si decides volver.',
   },
   {
-    q: '¿Cómo funcionan las alertas por WhatsApp?',
-    a: 'Cuando el porcentaje de postura cae por debajo de tu umbral configurado, hay alta mortalidad o el inventario de alimento está bajo, AviControl te envía un mensaje directo a tu WhatsApp.',
+    q: '¿Cómo funcionan las alertas de stock?',
+    a: 'Defines un stock mínimo para cada insumo (alimento, medicina, etc.). Cuando el inventario llega a ese nivel, MiAgroGestion te muestra una alerta en el dashboard automáticamente.',
   },
   {
-    q: '¿Mis datos están seguros?',
-    a: 'Sí. Todos los datos se almacenan en servidores en la nube con respaldo diario. Nadie más puede ver los datos de tu granja. Usamos cifrado SSL en todas las conexiones.',
+    q: '¿Puedo tener varios usuarios en mi cuenta?',
+    a: 'Sí. Desde el plan Profesional puedes tener hasta 5 usuarios con distintos roles (Admin, Operador, Visor). El plan Empresa soporta 10 usuarios.',
   },
   {
     q: '¿Qué métodos de pago aceptan?',
-    a: 'Aceptamos Yape, Plin, Mercado Pago, tarjeta de crédito/débito (Visa, Mastercard) y transferencia bancaria. También puedes pagar por link de WhatsApp.',
+    a: 'Aceptamos Yape, Plin, Mercado Pago, tarjeta de crédito/débito (Visa, Mastercard) y transferencia bancaria. También puedes coordinar por WhatsApp.',
   },
   {
-    q: '¿AviControl sirve para gallinas de engorde (broilers)?',
-    a: 'Por ahora AviControl está especializado en granjas de gallinas ponedoras. Las métricas, reportes y alertas están optimizados para producción de huevos.',
+    q: '¿MiAgroGestion sirve para granjas de broilers?',
+    a: 'Por ahora está especializado en granjas de gallinas ponedoras. Las métricas, alertas y reportes están optimizados para producción de huevos.',
   },
 ];
 ---
@@ -45,10 +45,10 @@ const faqs = [
 
     <div class="space-y-3">
       {faqs.map((faq) => (
-        <details class="group border border-slate-200 dark:border-slate-700 rounded-xl overflow-hidden bg-white dark:bg-slate-900 transition-colors" name="faq">
+        <details class="group border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden bg-white dark:bg-slate-900 transition-colors" name="faq">
           <summary class="flex items-center justify-between gap-4 p-5 cursor-pointer list-none hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">
             <span class="font-semibold text-slate-900 dark:text-white text-sm sm:text-base">{faq.q}</span>
-            <span class="flex-shrink-0 w-6 h-6 rounded-full bg-slate-100 dark:bg-slate-700 group-open:bg-brand-100 dark:group-open:bg-brand-900/40 flex items-center justify-center transition-colors">
+            <span class="flex-shrink-0 w-6 h-6 rounded-full bg-slate-100 dark:bg-slate-800 group-open:bg-brand-50 dark:group-open:bg-brand-600/20 flex items-center justify-center transition-colors">
               <svg class="w-3.5 h-3.5 text-slate-500 dark:text-slate-400 group-open:text-brand-600 dark:group-open:text-brand-400 group-open:rotate-45 transition-transform" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg>
             </span>
           </summary>
@@ -61,8 +61,8 @@ const faqs = [
 
     <p class="text-center text-sm text-slate-500 dark:text-slate-400 mt-8">
       ¿Tienes otra pregunta?
-      <a href="https://wa.me/51999999999?text=Hola%2C%20tengo%20una%20pregunta%20sobre%20AviControl" class="text-brand-600 dark:text-brand-400 font-semibold hover:underline cursor-pointer" target="_blank" rel="noopener noreferrer">
-        Escríbenos por WhatsApp
+      <a href="https://wa.me/51955497368?text=Hola%2C%20tengo%20una%20pregunta%20sobre%20MiAgroGestion" class="text-brand-600 dark:text-brand-400 font-semibold hover:underline cursor-pointer" target="_blank" rel="noopener noreferrer">
+        Escríbenos al +51 955 497 368
       </a>
     </p>
   </div>

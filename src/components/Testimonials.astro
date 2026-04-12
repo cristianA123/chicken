@@ -4,7 +4,7 @@ const testimonials = [
     name: 'Carlos Quispe',
     role: 'Propietario, Granja San Martín',
     location: 'Ica, Perú',
-    text: 'Antes llevaba todo en cuadernos y siempre me perdía datos. Con AviControl sé exactamente cuánto estoy produciendo cada día y me avisa por WhatsApp cuando la postura baja. Es como tener un asistente en la granja.',
+    text: 'Antes llevaba todo en cuadernos y siempre me perdía datos. Con MiAgroGestion sé exactamente cuánto estoy produciendo cada día y tengo alertas cuando el stock de alimento está bajo.',
     stars: 5,
     avatar: 'CQ',
     color: 'brand',
@@ -13,16 +13,16 @@ const testimonials = [
     name: 'Milagros Ramos',
     role: 'Administradora, Avícola El Valle',
     location: 'Arequipa, Perú',
-    text: 'Lo que más me gusta es que puedo ver la rentabilidad por galpón. Descubrí que uno de mis galpones consumía 20% más alimento de lo normal. Nunca lo hubiera visto con mi Excel anterior.',
+    text: 'Lo que más me gusta es ver la rentabilidad por galpón. Descubrí que uno consumía 20% más alimento de lo normal. Nunca lo hubiera visto en mi Excel anterior.',
     stars: 5,
     avatar: 'MR',
-    color: 'egg',
+    color: 'amber',
   },
   {
     name: 'Javier Morales',
     role: 'Gerente de producción, AviCorp S.A.',
     location: 'Lima, Perú',
-    text: 'Tenemos 3 granjas con 15,000 gallinas en total. AviControl nos permite ver todo desde una sola pantalla. El equipo de soporte responde rápido y siempre están mejorando el producto.',
+    text: 'Tenemos 3 granjas con 15,000 gallinas. MiAgroGestion nos permite ver todo desde una sola pantalla. El registro diario por turno nos ahorró mucho tiempo.',
     stars: 5,
     avatar: 'JM',
     color: 'slate',
@@ -34,13 +34,13 @@ const testimonials = [
     <div class="text-center max-w-2xl mx-auto mb-14">
       <p class="text-brand-600 dark:text-brand-400 font-semibold text-sm uppercase tracking-wider mb-3">Testimonios</p>
       <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white mb-4 text-balance">
-        Granjeros que ya confían en AviControl
+        Granjeros que ya usan MiAgroGestion
       </h2>
     </div>
 
     <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
       {testimonials.map((t) => (
-        <div class="bg-white dark:bg-slate-800 rounded-2xl p-6 border border-slate-100 dark:border-slate-700 shadow-sm flex flex-col transition-colors">
+        <div class="bg-white dark:bg-slate-900 rounded-2xl p-6 border border-slate-100 dark:border-slate-800 shadow-sm flex flex-col transition-colors">
           <div class="flex gap-1 mb-4">
             {Array.from({ length: t.stars }).map(() => (
               <svg class="w-4 h-4 text-egg-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
@@ -49,11 +49,11 @@ const testimonials = [
           <blockquote class="text-slate-700 dark:text-slate-300 text-sm leading-relaxed flex-1 mb-5">
             "{t.text}"
           </blockquote>
-          <div class="flex items-center gap-3 pt-4 border-t border-slate-100 dark:border-slate-700">
+          <div class="flex items-center gap-3 pt-4 border-t border-slate-100 dark:border-slate-800">
             <div class={`w-10 h-10 rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0 ${
-              t.color === 'brand' ? 'bg-brand-100 dark:bg-brand-900/40 text-brand-700 dark:text-brand-400'
-              : t.color === 'egg' ? 'bg-egg-400/20 text-egg-600'
-              : 'bg-slate-200 dark:bg-slate-700 text-slate-700 dark:text-slate-300'
+              t.color === 'brand' ? 'bg-brand-50 dark:bg-brand-600/20 text-brand-700 dark:text-brand-400'
+              : t.color === 'amber' ? 'bg-egg-500/10 text-egg-600'
+              : 'bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300'
             }`}>
               {t.avatar}
             </div>
@@ -66,16 +66,15 @@ const testimonials = [
       ))}
     </div>
 
-    <!-- Trust badges -->
     <div class="mt-12 flex flex-wrap justify-center items-center gap-8 opacity-60">
       {[
-        { icon: `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-brand-600 dark:text-brand-400"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>`, label: 'Datos 100% seguros' },
-        { icon: `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-brand-600 dark:text-brand-400"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>`, label: 'Sin cobros ocultos' },
-        { icon: `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-brand-600 dark:text-brand-400"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.15 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.06 1.2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.09 8.19a16 16 0 0 0 5.72 5.72l1.26-1.26a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21 15z"/></svg>`, label: 'Soporte por WhatsApp' },
-        { icon: `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-brand-600 dark:text-brand-400"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>`, label: 'Funciona offline' },
+        { label: 'Datos 100% seguros' },
+        { label: 'Sin cobros ocultos' },
+        { label: 'Soporte por WhatsApp' },
+        { label: 'Funciona offline' },
       ].map(b => (
         <div class="flex items-center gap-2 text-slate-600 dark:text-slate-400 text-sm font-medium">
-          <Fragment set:html={b.icon} />
+          <svg class="w-4 h-4 text-brand-600 dark:text-brand-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 11 3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
           {b.label}
         </div>
       ))}

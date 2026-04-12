@@ -2,18 +2,18 @@
 const steps = [
   {
     num: '01',
-    title: 'Crea tu granja en 2 minutos',
-    desc: 'Registra el nombre de tu granja, agrega tus galpones y crea tu primer lote indicando la cantidad de gallinas, la raza y la fecha de ingreso. Sin complicaciones.',
+    title: 'Registra tu granja',
+    desc: 'Crea tu granja, agrega tus galpones y abre tu primer lote con la cantidad de gallinas, la raza y la fecha de ingreso. Listo en 2 minutos.',
   },
   {
     num: '02',
-    title: 'Registra tu producción diaria',
-    desc: 'Cada día ingresa cuántos huevos recolectaste, cuántas gallinas murieron y cuánto alimento consumieron. Solo toma 30 segundos desde tu celular.',
+    title: 'Ingresa los datos del día',
+    desc: 'Cada mañana (o tarde) registra los huevos por turno, mortalidad, alimento y agua. Menos de 30 segundos desde tu celular, sin necesidad de internet.',
   },
   {
     num: '03',
-    title: 'Recibe reportes y alertas automáticas',
-    desc: 'AviControl calcula tu % de postura, conversión alimenticia y rentabilidad. Si algo sale mal, te avisa por WhatsApp antes de que sea tarde.',
+    title: 'Toma decisiones con datos reales',
+    desc: 'MiAgroGestion calcula tu % de postura, utilidad y conversión alimenticia. Te alerta si algo sale mal antes de que pierdas producción.',
   },
 ];
 ---
@@ -22,10 +22,10 @@ const steps = [
     <div class="text-center max-w-2xl mx-auto mb-14">
       <p class="text-brand-600 dark:text-brand-400 font-semibold text-sm uppercase tracking-wider mb-3">Cómo funciona</p>
       <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white mb-4 text-balance">
-        Empieza a controlar tu granja hoy
+        3 pasos: Registra → Ve el dashboard → Toma decisiones
       </h2>
       <p class="text-slate-600 dark:text-slate-400 text-lg">
-        En menos de 5 minutos puedes tener tu primera granja configurada y lista para registrar.
+        En menos de 5 minutos tienes tu granja configurada y tu primer registro listo.
       </p>
     </div>
 
@@ -35,7 +35,7 @@ const steps = [
           {i < steps.length - 1 && (
             <div class="hidden md:block absolute top-8 left-full w-full h-px bg-brand-200 dark:bg-brand-800 -translate-x-1/2 z-0"></div>
           )}
-          <div class="relative z-10 bg-white dark:bg-slate-800 rounded-2xl p-6 border border-brand-100 dark:border-slate-700 shadow-sm h-full transition-colors">
+          <div class="relative z-10 bg-white dark:bg-slate-900 rounded-2xl p-6 border border-brand-100 dark:border-slate-800 shadow-sm h-full transition-colors">
             <div class="w-14 h-14 bg-brand-600 rounded-2xl flex items-center justify-center mb-5">
               <span class="text-white font-extrabold text-lg">{step.num}</span>
             </div>
@@ -48,13 +48,13 @@ const steps = [
 
     <div class="text-center mt-12">
       <a
-        href="https://app.avicontrol.app/registro"
+        href="https://app.miagrogesion.com/registro"
         class="inline-flex items-center gap-2 bg-brand-600 hover:bg-brand-700 text-white font-semibold px-7 py-3.5 rounded-xl transition-colors cursor-pointer"
       >
-        Crear mi cuenta gratis
+        Empieza tu prueba de 14 días
         <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
       </a>
-      <p class="text-sm text-slate-500 dark:text-slate-500 mt-3">Sin tarjeta de crédito · Plan gratis para siempre</p>
+      <p class="text-sm text-slate-500 dark:text-slate-500 mt-3">Sin tarjeta de crédito · Cancela cuando quieras</p>
     </div>
   </div>
 </section>

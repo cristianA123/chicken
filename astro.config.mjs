@@ -3,7 +3,7 @@ import tailwind from '@astrojs/tailwind';
 import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
-  site: 'https://avicontrol.app',
+  site: 'https://miagrogesion.com',
   output: 'static',
   integrations: [
     tailwind(),

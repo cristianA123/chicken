@@ -5,31 +5,31 @@
     <div class="grid md:grid-cols-2 gap-12 items-center">
       <!-- Texto -->
       <div>
-        <div class="inline-flex items-center gap-2 bg-brand-100 dark:bg-brand-900/40 text-brand-700 dark:text-brand-400 text-xs font-semibold px-3 py-1.5 rounded-full mb-5">
-          <span class="w-1.5 h-1.5 bg-brand-500 rounded-full"></span>
-          Software avícola #1 en LATAM
+        <div class="inline-flex items-center gap-2 bg-brand-50 dark:bg-brand-600/20 text-brand-600 dark:text-brand-400 text-xs font-semibold px-3 py-1.5 rounded-full mb-5 border border-brand-100 dark:border-brand-600/30">
+          <span class="w-1.5 h-1.5 bg-brand-500 rounded-full animate-pulse"></span>
+          Prueba gratis 14 días · Sin tarjeta de crédito
         </div>
 
         <h1 class="text-4xl sm:text-5xl font-extrabold text-slate-900 dark:text-white leading-tight text-balance mb-5">
-          Controla tu granja avícola
-          <span class="text-brand-600 dark:text-brand-400"> desde cualquier celular</span>
+          Controla tu granja de gallinas ponedoras
+          <span class="text-brand-600 dark:text-brand-400"> desde el celular</span>
         </h1>
 
         <p class="text-lg text-slate-600 dark:text-slate-400 leading-relaxed mb-8 max-w-lg">
-          Registra la producción de huevos, controla el porcentaje de postura, gestiona ventas y conoce tu rentabilidad real. Diseñado para granjas en Perú y toda Latinoamérica.
+          Registra producción, ventas y gastos en menos de 30 segundos al día. Conoce tu % de postura, rentabilidad real y recibe alertas automáticas cuando algo sale mal.
         </p>
 
         <div class="flex flex-col sm:flex-row gap-3 mb-8">
           <a
-            href="https://app.avicontrol.app/registro"
+            href="https://app.miagrogesion.com/registro"
             class="inline-flex items-center justify-center gap-2 bg-brand-600 hover:bg-brand-700 text-white font-semibold px-6 py-3.5 rounded-xl transition-colors text-base cursor-pointer"
           >
-            Empieza gratis — sin tarjeta
+            Empieza tu prueba gratis
             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
           </a>
           <a
             href="#como-funciona"
-            class="inline-flex items-center justify-center gap-2 border border-slate-200 dark:border-slate-700 hover:border-brand-300 dark:hover:border-brand-600 text-slate-700 dark:text-slate-300 font-semibold px-6 py-3.5 rounded-xl transition-colors text-base cursor-pointer"
+            class="inline-flex items-center justify-center gap-2 border border-slate-200 dark:border-slate-800 hover:border-brand-400 dark:hover:border-brand-600 text-slate-700 dark:text-slate-300 font-semibold px-6 py-3.5 rounded-xl transition-colors text-base cursor-pointer"
           >
             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
             Ver cómo funciona
@@ -38,55 +38,54 @@
 
         <p class="text-sm text-slate-500 dark:text-slate-500 flex items-center gap-2">
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-brand-500"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg>
-          Más de 500 granjas ya lo usan · Plan gratis disponible
+          14 días con todas las funcionalidades · Sin tarjeta · Cancela cuando quieras
         </p>
       </div>
 
-      <!-- Visual del dashboard (mockup con CSS) -->
+      <!-- Mockup del dashboard -->
       <div class="relative hidden md:block">
-        <!-- Tarjeta principal -->
-        <div class="bg-white dark:bg-slate-800 rounded-2xl shadow-2xl border border-slate-100 dark:border-slate-700 p-6 relative z-10">
-          <!-- Header del dashboard -->
+        <div class="bg-white dark:bg-slate-900 rounded-2xl shadow-2xl border border-slate-100 dark:border-slate-800 p-6 relative z-10">
+          <!-- Header -->
           <div class="flex items-center justify-between mb-5">
             <div>
-              <p class="text-xs text-slate-500 dark:text-slate-400 font-medium uppercase tracking-wide">Granja El Paraíso</p>
+              <p class="text-xs text-slate-500 dark:text-slate-400 font-medium uppercase tracking-wide">Granja Los Andes · Galpón 2</p>
               <h3 class="text-lg font-bold text-slate-900 dark:text-white">Dashboard hoy</h3>
             </div>
-            <span class="bg-brand-100 dark:bg-brand-900/50 text-brand-700 dark:text-brand-400 text-xs font-semibold px-2.5 py-1 rounded-lg">Galpón 1</span>
+            <span class="bg-brand-50 dark:bg-brand-600/20 text-brand-600 dark:text-brand-400 text-xs font-semibold px-2.5 py-1 rounded-lg">Lote activo</span>
           </div>
 
-          <!-- Métricas -->
+          <!-- KPIs -->
           <div class="grid grid-cols-2 gap-3 mb-5">
-            <div class="bg-brand-50 dark:bg-brand-900/30 rounded-xl p-4">
+            <div class="bg-brand-50 dark:bg-brand-600/10 rounded-xl p-4">
               <p class="text-xs text-slate-500 dark:text-slate-400 mb-1">% Postura hoy</p>
-              <p class="text-3xl font-extrabold text-brand-600 dark:text-brand-400">92.4%</p>
+              <p class="text-3xl font-extrabold text-brand-600 dark:text-brand-400">91.8%</p>
               <p class="text-xs text-brand-600 dark:text-brand-500 mt-1 flex items-center gap-0.5">
                 <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6"/></svg>
-                +1.2% vs ayer
+                +0.8% vs ayer
               </p>
             </div>
-            <div class="bg-egg-400/10 dark:bg-egg-400/10 rounded-xl p-4">
-              <p class="text-xs text-slate-500 dark:text-slate-400 mb-1">Huevos recolectados</p>
-              <p class="text-3xl font-extrabold text-egg-600">4,620</p>
-              <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">de 5,000 gallinas</p>
+            <div class="bg-egg-500/10 rounded-xl p-4">
+              <p class="text-xs text-slate-500 dark:text-slate-400 mb-1">Huevos hoy</p>
+              <p class="text-3xl font-extrabold text-egg-500">3,672</p>
+              <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">de 4,000 gallinas</p>
             </div>
-            <div class="bg-slate-50 dark:bg-slate-700/50 rounded-xl p-4">
-              <p class="text-xs text-slate-500 dark:text-slate-400 mb-1">Mortalidad hoy</p>
-              <p class="text-2xl font-extrabold text-slate-700 dark:text-slate-200">2 aves</p>
-              <p class="text-xs text-slate-400 dark:text-slate-500 mt-1">0.04% del lote</p>
+            <div class="bg-slate-50 dark:bg-slate-800 rounded-xl p-4">
+              <p class="text-xs text-slate-500 dark:text-slate-400 mb-1">Ingresos mes</p>
+              <p class="text-2xl font-extrabold text-slate-700 dark:text-white">S/ 8,420</p>
+              <p class="text-xs text-teal-500 mt-1">Utilidad: S/ 2,180</p>
             </div>
-            <div class="bg-slate-50 dark:bg-slate-700/50 rounded-xl p-4">
-              <p class="text-xs text-slate-500 dark:text-slate-400 mb-1">Alimento (kg)</p>
-              <p class="text-2xl font-extrabold text-slate-700 dark:text-slate-200">850 kg</p>
-              <p class="text-xs text-slate-400 dark:text-slate-500 mt-1">Conv. 1.84</p>
+            <div class="bg-slate-50 dark:bg-slate-800 rounded-xl p-4">
+              <p class="text-xs text-slate-500 dark:text-slate-400 mb-1">Alimento hoy</p>
+              <p class="text-2xl font-extrabold text-slate-700 dark:text-white">680 kg</p>
+              <p class="text-xs text-slate-400 dark:text-slate-500 mt-1">Conv. 1.85</p>
             </div>
           </div>
 
-          <!-- Mini gráfica de barras -->
+          <!-- Mini gráfica -->
           <div>
             <p class="text-xs text-slate-500 dark:text-slate-400 font-medium mb-2">% Postura — últimos 7 días</p>
             <div class="flex items-end gap-1.5 h-12">
-              {[88, 89, 91, 90, 92, 91, 92].map((v) => (
+              {[87, 89, 90, 88, 91, 91, 92].map((v) => (
                 <div
                   class="flex-1 bg-brand-500 dark:bg-brand-600 rounded-t-sm opacity-80"
                   style={`height: ${(v / 95) * 100}%`}
@@ -96,20 +95,20 @@
           </div>
         </div>
 
-        <!-- Notificación flotante -->
-        <div class="absolute -bottom-4 -left-6 bg-white dark:bg-slate-800 rounded-xl shadow-lg border border-slate-100 dark:border-slate-700 p-3 flex items-center gap-3 z-20 w-56">
-          <div class="w-9 h-9 bg-green-100 dark:bg-green-900/40 rounded-lg flex items-center justify-center flex-shrink-0">
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.15 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.06 1.2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.09 8.19a16 16 0 0 0 5.72 5.72l1.26-1.26a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21 15z"/></svg>
+        <!-- Badge alerta stock -->
+        <div class="absolute -bottom-4 -left-6 bg-white dark:bg-slate-900 rounded-xl shadow-lg border border-slate-100 dark:border-slate-800 p-3 flex items-center gap-3 z-20 w-60">
+          <div class="w-9 h-9 bg-egg-500/10 rounded-lg flex items-center justify-center flex-shrink-0">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#f59e0b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
           </div>
           <div>
-            <p class="text-xs font-semibold text-slate-800 dark:text-slate-200">Alerta WhatsApp</p>
-            <p class="text-xs text-slate-500 dark:text-slate-400">Postura bajó al 87%</p>
+            <p class="text-xs font-semibold text-slate-800 dark:text-white">Stock mínimo</p>
+            <p class="text-xs text-slate-500 dark:text-slate-400">Alimento balanceado: 3 días</p>
           </div>
         </div>
 
-        <!-- Badge flotante superior -->
-        <div class="absolute -top-4 -right-4 bg-egg-500 text-white rounded-xl shadow-lg px-3 py-2 z-20">
-          <p class="text-xs font-bold">+15% rentabilidad</p>
+        <!-- Badge rentabilidad -->
+        <div class="absolute -top-4 -right-4 bg-brand-600 text-white rounded-xl shadow-lg px-3 py-2 z-20">
+          <p class="text-xs font-bold">+18% utilidad</p>
           <p class="text-xs opacity-80">vs mes anterior</p>
         </div>
       </div>
