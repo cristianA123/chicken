@@ -1,0 +1,152 @@
+---
+const plans = [
+  {
+    name: 'Gratis',
+    price: '$0',
+    period: 'para siempre',
+    desc: 'Para micro granjas menores de 500 gallinas',
+    features: [
+      '1 granja · 2 galpones',
+      'Registro diario básico',
+      'Control de postura',
+      'Historial 30 días',
+      '1 usuario',
+      'Alertas básicas WhatsApp',
+    ],
+    cta: 'Comenzar gratis',
+    ctaLink: 'https://app.avicontrol.app/registro',
+    popular: false,
+    dark: false,
+  },
+  {
+    name: 'Productor',
+    price: '$15',
+    period: 'USD / mes',
+    desc: 'Para granjas de 500 a 5,000 gallinas',
+    features: [
+      'Multi-galpón ilimitado',
+      'Reportes PDF',
+      'Alertas WhatsApp completas',
+      'Historial 1 año',
+      'Gestión de ventas básica',
+      '3 usuarios',
+    ],
+    cta: 'Empezar ahora',
+    ctaLink: 'https://app.avicontrol.app/registro?plan=productor',
+    popular: true,
+    dark: false,
+  },
+  {
+    name: 'Profesional',
+    price: '$40',
+    period: 'USD / mes',
+    desc: 'Para granjas de 5,000 a 50,000 gallinas',
+    features: [
+      'Multi-granja',
+      'Análisis de rentabilidad',
+      'Export CSV / Excel',
+      'Historial ilimitado',
+      'Gestión completa de ventas',
+      '10 usuarios',
+    ],
+    cta: 'Empezar ahora',
+    ctaLink: 'https://app.avicontrol.app/registro?plan=profesional',
+    popular: false,
+    dark: false,
+  },
+  {
+    name: 'Empresa',
+    price: 'Custom',
+    period: 'cotización personalizada',
+    desc: 'Para grandes integradoras (50,000+ gallinas)',
+    features: [
+      'API e integraciones',
+      'Soporte IoT / sensores',
+      'Benchmarking entre granjas',
+      'Usuarios ilimitados',
+      'Soporte prioritario',
+      'Onboarding dedicado',
+    ],
+    cta: 'Hablar con ventas',
+    ctaLink: 'https://wa.me/51999999999?text=Hola%2C%20me%20interesa%20el%20plan%20Empresa%20de%20AviControl',
+    popular: false,
+    dark: true,
+  },
+];
+---
+<section id="precios" class="py-20 bg-white dark:bg-slate-950 transition-colors duration-300">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6">
+    <div class="text-center max-w-2xl mx-auto mb-14">
+      <p class="text-brand-600 dark:text-brand-400 font-semibold text-sm uppercase tracking-wider mb-3">Precios</p>
+      <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white mb-4 text-balance">
+        Planes accesibles para cada tamaño de granja
+      </h2>
+      <p class="text-slate-600 dark:text-slate-400 text-lg">
+        Empieza gratis y escala cuando tu negocio crezca. Sin contratos, cancela cuando quieras.
+      </p>
+    </div>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 items-start">
+      {plans.map((plan) => (
+        <div class={`rounded-2xl border p-6 relative flex flex-col h-full ${
+          plan.popular
+            ? 'border-brand-500 shadow-lg shadow-brand-100 dark:shadow-brand-900/30 bg-brand-600'
+            : plan.dark
+            ? 'border-slate-700 bg-slate-900'
+            : 'border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900'
+        }`}>
+          {plan.popular && (
+            <div class="absolute -top-3 left-1/2 -translate-x-1/2">
+              <span class="bg-egg-500 text-white text-xs font-bold px-3 py-1 rounded-full whitespace-nowrap">
+                Más popular
+              </span>
+            </div>
+          )}
+
+          <div class="mb-5">
+            <h3 class={`font-bold text-lg mb-1 ${plan.popular || plan.dark ? 'text-white' : 'text-slate-900 dark:text-white'}`}>
+              {plan.name}
+            </h3>
+            <p class={`text-xs mb-4 ${plan.popular ? 'text-white/70' : plan.dark ? 'text-slate-400' : 'text-slate-500 dark:text-slate-400'}`}>
+              {plan.desc}
+            </p>
+            <div class="flex items-end gap-1">
+              <span class={`text-4xl font-extrabold ${plan.popular || plan.dark ? 'text-white' : 'text-slate-900 dark:text-white'}`}>
+                {plan.price}
+              </span>
+              <span class={`text-xs mb-1.5 ${plan.popular ? 'text-white/70' : plan.dark ? 'text-slate-400' : 'text-slate-500 dark:text-slate-400'}`}>
+                {plan.period}
+              </span>
+            </div>
+          </div>
+
+          <ul class="space-y-2.5 mb-6 flex-1">
+            {plan.features.map((feat) => (
+              <li class="flex items-start gap-2">
+                <svg class={`w-4 h-4 mt-0.5 flex-shrink-0 ${plan.popular ? 'text-white' : plan.dark ? 'text-brand-400' : 'text-brand-500 dark:text-brand-400'}`} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 11 3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+                <span class={`text-sm ${plan.popular ? 'text-white/90' : plan.dark ? 'text-slate-300' : 'text-slate-600 dark:text-slate-300'}`}>{feat}</span>
+              </li>
+            ))}
+          </ul>
+
+          <a
+            href={plan.ctaLink}
+            class={`block w-full text-center font-semibold py-3 rounded-xl transition-colors text-sm cursor-pointer ${
+              plan.popular
+                ? 'bg-white text-brand-600 hover:bg-brand-50'
+                : plan.dark
+                ? 'bg-brand-600 text-white hover:bg-brand-500'
+                : 'bg-brand-600 text-white hover:bg-brand-700'
+            }`}
+          >
+            {plan.cta}
+          </a>
+        </div>
+      ))}
+    </div>
+
+    <p class="text-center text-sm text-slate-500 dark:text-slate-500 mt-8">
+      Aceptamos Yape, Plin, Mercado Pago, tarjeta de crédito/débito y transferencia bancaria.
+    </p>
+  </div>
+</section>

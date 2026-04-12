@@ -1,0 +1,21 @@
+---
+const stats = [
+  { value: '500+', label: 'Granjas activas', sub: 'en Perú y LATAM' },
+  { value: '2M+', label: 'Registros diarios', sub: 'procesados al mes' },
+  { value: '92%', label: 'Tasa de retención', sub: 'de nuestros clientes' },
+  { value: '<30s', label: 'Registro diario', sub: 'en menos de 30 segundos' },
+];
+---
+<section class="py-12 bg-slate-900 dark:bg-slate-800 transition-colors duration-300">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+      {stats.map((s) => (
+        <div class="text-center">
+          <p class="text-3xl sm:text-4xl font-extrabold text-white mb-1">{s.value}</p>
+          <p class="text-sm font-semibold text-brand-400 mb-0.5">{s.label}</p>
+          <p class="text-xs text-slate-500">{s.sub}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
