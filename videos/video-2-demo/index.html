@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="es-419">
+<head>
+  <meta charset="UTF-8" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      width: 1080px;
+      height: 1920px;
+      overflow: hidden;
+      background: #0d1f16;
+      font-family: 'Poppins', sans-serif;
+    }
+    .scene {
+      position: absolute;
+      top: 0; left: 0;
+      width: 1080px;
+      height: 1920px;
+      overflow: hidden;
+      background: #0d1f16;
+    }
+    #scene2, #scene3 { opacity: 0; }
+
+    .scene-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+      padding: 130px 88px;
+      gap: 36px;
+      box-sizing: border-box;
+    }
+    .glow {
+      position: absolute;
+      border-radius: 50%;
+      pointer-events: none;
+    }
+    .eyebrow {
+      font-size: 30px;
+      font-weight: 700;
+      color: #16a34a;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+    .headline {
+      font-size: 100px;
+      font-weight: 900;
+      color: #f8fafc;
+      line-height: 1.0;
+      max-width: 900px;
+    }
+    .headline .green { color: #16a34a; }
+    .headline .amber { color: #f59e0b; }
+    .body-text {
+      font-size: 40px;
+      font-weight: 500;
+      color: #94a3b8;
+      line-height: 1.45;
+      max-width: 880px;
+    }
+    .feature-list {
+      display: flex;
+      flex-direction: column;
+      gap: 22px;
+    }
+    .feature-item {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      background: #1e3a2e;
+      border: 1px solid rgba(22,163,74,0.2);
+      border-radius: 20px;
+      padding: 28px 36px;
+    }
+    .feature-icon {
+      width: 56px; height: 56px;
+      background: rgba(22,163,74,0.15);
+      border-radius: 14px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 28px;
+      flex-shrink: 0;
+    }
+    .feature-text {
+      font-size: 36px;
+      font-weight: 600;
+      color: #f8fafc;
+    }
+    .feature-sub {
+      font-size: 26px;
+      color: #64748b;
+      font-weight: 400;
+      margin-top: 4px;
+    }
+    .logo-row {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+    }
+    .logo-icon {
+      width: 72px; height: 72px;
+      background: #16a34a;
+      border-radius: 18px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 38px;
+    }
+    .logo-name {
+      font-size: 44px;
+      font-weight: 800;
+      color: #f8fafc;
+    }
+    .logo-name span { color: #4ade80; }
+    .dashboard-img {
+      width: 904px;
+      border-radius: 16px;
+      border: 1px solid rgba(22,163,74,0.2);
+      box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+    }
+    .cta-btn {
+      background: #16a34a;
+      color: #fff;
+      font-size: 40px;
+      font-weight: 800;
+      padding: 28px 52px;
+      border-radius: 20px;
+      width: fit-content;
+    }
+    .url {
+      font-size: 32px;
+      font-weight: 600;
+      color: #4ade80;
+    }
+  </style>
+</head>
+<body>
+<div data-composition-id="video-2" data-start="0" data-width="1080" data-height="1920">
+
+  <audio id="nar" data-start="0" data-duration="auto" data-track-index="2" src="narration.wav" data-volume="1"></audio>
+
+  <!-- SCENE 1 — INTRO -->
+  <div id="scene1" class="scene">
+    <div id="s1g1" class="glow" style="width:1000px;height:1000px;background:radial-gradient(circle,rgba(22,163,74,0.14) 0%,transparent 70%);top:-100px;right:-300px;"></div>
+    <div id="s1g2" class="glow" style="width:600px;height:600px;background:radial-gradient(circle,rgba(245,158,11,0.07) 0%,transparent 70%);bottom:200px;left:-100px;"></div>
+
+    <div class="scene-content" style="align-items:center;text-align:center;gap:52px;">
+      <div id="s1-logo" class="logo-row">
+        <div class="logo-icon">🐔</div>
+        <div class="logo-name">MiAgro<span>Gestión</span></div>
+      </div>
+      <div id="s1-h" class="headline" style="text-align:center;font-size:96px;">
+        Así se ve por <span class="green">dentro</span>
+      </div>
+      <div id="s1-b" class="body-text" style="text-align:center;">
+        El dashboard que ya usan granjas ponedoras en Latinoamérica.
+      </div>
+      <div id="s1-img" style="position:relative;">
+        <img class="dashboard-img" src="../../public/dashboard-screenshot.png" alt="Dashboard MiAgroGestión" />
+        <div style="position:absolute;inset:0;background:linear-gradient(to bottom,transparent 60%,#0d1f16 100%);border-radius:16px;"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SCENE 2 — FEATURES -->
+  <div id="scene2" class="scene">
+    <div id="s2g1" class="glow" style="width:800px;height:800px;background:radial-gradient(circle,rgba(22,163,74,0.12) 0%,transparent 70%);top:100px;right:-200px;"></div>
+
+    <div class="scene-content" style="gap:28px;">
+      <div id="s2-ey" class="eyebrow">Todo incluido</div>
+      <div id="s2-h" class="headline" style="font-size:80px;margin-bottom:8px;">
+        Un dashboard, <span class="green">todo lo que necesitas</span>
+      </div>
+      <div id="s2-features" class="feature-list">
+        <div class="feature-item" id="f1">
+          <div class="feature-icon">📊</div>
+          <div>
+            <div class="feature-text">% Postura en tiempo real</div>
+            <div class="feature-sub">Por lote y por galpón</div>
+          </div>
+        </div>
+        <div class="feature-item" id="f2">
+          <div class="feature-icon">💰</div>
+          <div>
+            <div class="feature-text">Ingresos y utilidad</div>
+            <div class="feature-sub">Por mes, semana o día</div>
+          </div>
+        </div>
+        <div class="feature-item" id="f3">
+          <div class="feature-icon">🔔</div>
+          <div>
+            <div class="feature-text">Alertas automáticas</div>
+            <div class="feature-sub">Stock bajo, postura anormal</div>
+          </div>
+        </div>
+        <div class="feature-item" id="f4">
+          <div class="feature-icon">📱</div>
+          <div>
+            <div class="feature-text">Desde tu celular</div>
+            <div class="feature-sub">Menos de 30 seg al día</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SCENE 3 — CTA -->
+  <div id="scene3" class="scene">
+    <div id="s3g1" class="glow" style="width:1400px;height:1400px;background:radial-gradient(circle,rgba(22,163,74,0.17) 0%,transparent 70%);top:50%;left:50%;transform:translate(-50%,-50%);"></div>
+
+    <div class="scene-content" style="align-items:center;text-align:center;gap:48px;">
+      <div id="s3-logo" class="logo-row">
+        <div class="logo-icon">🐔</div>
+        <div class="logo-name">MiAgro<span>Gestión</span></div>
+      </div>
+      <div id="s3-h" class="headline" style="text-align:center;font-size:92px;">
+        Todo desde tu <span class="green">celular</span>
+      </div>
+      <div id="s3-b" class="body-text" style="text-align:center;">
+        En menos de 30 segundos al día tienes el control total de tu granja.
+      </div>
+      <div id="s3-cta" class="cta-btn">Prueba 14 días gratis →</div>
+      <div id="s3-url" class="url">app.miagrogestion.com</div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+  <script>
+    window.__timelines = window.__timelines || {};
+    const tl = gsap.timeline({ paused: true });
+
+    // Ambient glows
+    tl.to('#s1g1', { scale: 1.07, duration: 4, ease: 'sine.inOut', repeat: 4, yoyo: true }, 0);
+    tl.to('#s1g2', { scale: 1.05, duration: 3.5, ease: 'sine.inOut', repeat: 5, yoyo: true }, 1);
+
+    // ── Scene 1 entrances ──
+    tl.from('#s1-logo', { y: -30, opacity: 0, duration: 0.45, ease: 'power3.out' }, 0.15);
+    tl.from('#s1-h', { y: 60, opacity: 0, duration: 0.6, ease: 'expo.out' }, 0.35);
+    tl.from('#s1-b', { y: 40, opacity: 0, duration: 0.45, ease: 'power2.out' }, 0.6);
+    tl.from('#s1-img', { y: 80, opacity: 0, scale: 0.95, duration: 0.65, ease: 'power3.out' }, 0.8);
+
+    // ── Transition 1→2: vertical push at t=3.5s ──
+    const T1 = 3.5;
+    tl.to('#scene1', { y: -1920, duration: 0.45, ease: 'power3.inOut' }, T1);
+    tl.fromTo('#scene2', { y: 1920, opacity: 1 }, { y: 0, duration: 0.45, ease: 'power3.inOut' }, T1);
+
+    // ── Scene 2 entrances ──
+    tl.from('#s2-ey', { x: -40, opacity: 0, duration: 0.4, ease: 'power3.out' }, T1 + 0.5);
+    tl.from('#s2-h', { y: 55, opacity: 0, duration: 0.55, ease: 'expo.out' }, T1 + 0.65);
+    tl.from('#f1', { x: -50, opacity: 0, duration: 0.45, ease: 'power3.out' }, T1 + 0.9);
+    tl.from('#f2', { x: -50, opacity: 0, duration: 0.45, ease: 'power3.out' }, T1 + 1.0);
+    tl.from('#f3', { x: -50, opacity: 0, duration: 0.45, ease: 'power3.out' }, T1 + 1.1);
+    tl.from('#f4', { x: -50, opacity: 0, duration: 0.45, ease: 'power3.out' }, T1 + 1.2);
+
+    // ── Transition 2→3: blur crossfade at t=13.8s ──
+    const T2 = 13.8;
+    tl.to('#scene2', { opacity: 0, filter: 'blur(12px)', duration: 0.5, ease: 'sine.inOut' }, T2);
+    tl.fromTo('#scene3', { opacity: 0 }, { opacity: 1, duration: 0.5, ease: 'sine.inOut' }, T2 + 0.12);
+
+    // ── Scene 3 entrances ──
+    tl.from('#s3-logo', { scale: 0.82, opacity: 0, duration: 0.45, ease: 'back.out(1.4)' }, T2 + 0.62);
+    tl.from('#s3-h', { y: 65, opacity: 0, duration: 0.6, ease: 'expo.out' }, T2 + 0.82);
+    tl.from('#s3-b', { y: 40, opacity: 0, duration: 0.45, ease: 'power2.out' }, T2 + 1.1);
+    tl.from('#s3-cta', { scale: 0.82, opacity: 0, duration: 0.45, ease: 'back.out(1.8)' }, T2 + 1.35);
+    tl.from('#s3-url', { y: 22, opacity: 0, duration: 0.38, ease: 'power2.out' }, T2 + 1.65);
+
+    // visibility kills after opacity exits
+    tl.set('#scene2', { visibility: 'hidden' }, 14.3);
+    tl.set('#scene3', { visibility: 'hidden' }, 19.7);
+
+    // ── Final fade ──
+    tl.to('#scene3', { opacity: 0, duration: 0.7, ease: 'sine.inOut' }, 19.0);
+
+    window.__timelines['video-2'] = tl;
+  </script>
+</div>
+</body>
+</html>

@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="es-419">
+<head>
+  <meta charset="UTF-8" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      width: 1080px;
+      height: 1920px;
+      overflow: hidden;
+      background: #0d1f16;
+      font-family: 'Poppins', sans-serif;
+    }
+    .scene {
+      position: absolute;
+      top: 0; left: 0;
+      width: 1080px;
+      height: 1920px;
+      overflow: hidden;
+      background: #0d1f16;
+    }
+    #scene2, #scene3, #scene4 { opacity: 0; }
+
+    .scene-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+      padding: 140px 88px;
+      gap: 32px;
+      box-sizing: border-box;
+    }
+    .glow {
+      position: absolute;
+      border-radius: 50%;
+      pointer-events: none;
+    }
+    .eyebrow {
+      font-size: 30px;
+      font-weight: 700;
+      color: #16a34a;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+    .headline {
+      font-size: 108px;
+      font-weight: 900;
+      color: #f8fafc;
+      line-height: 1.0;
+      max-width: 900px;
+    }
+    .headline .green { color: #16a34a; }
+    .headline .amber { color: #f59e0b; }
+    .body-text {
+      font-size: 42px;
+      font-weight: 500;
+      color: #94a3b8;
+      line-height: 1.45;
+      max-width: 880px;
+    }
+    .kpi-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+    .kpi-card {
+      background: #1e3a2e;
+      border: 1px solid rgba(22,163,74,0.25);
+      border-radius: 24px;
+      padding: 36px 40px;
+    }
+    .kpi-label {
+      font-size: 24px;
+      font-weight: 600;
+      color: #64748b;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 10px;
+    }
+    .kpi-value {
+      font-size: 72px;
+      font-weight: 900;
+      color: #f8fafc;
+      font-variant-numeric: tabular-nums;
+      line-height: 1;
+    }
+    .kpi-value.green { color: #16a34a; }
+    .kpi-value.amber { color: #f59e0b; }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      background: rgba(22,163,74,0.12);
+      border: 1px solid rgba(22,163,74,0.3);
+      color: #4ade80;
+      font-size: 28px;
+      font-weight: 700;
+      padding: 14px 28px;
+      border-radius: 100px;
+      width: fit-content;
+    }
+    .logo-row {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+    }
+    .logo-icon {
+      width: 72px; height: 72px;
+      background: #16a34a;
+      border-radius: 18px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 38px;
+    }
+    .logo-name {
+      font-size: 44px;
+      font-weight: 800;
+      color: #f8fafc;
+    }
+    .logo-name span { color: #4ade80; }
+    .cta-btn {
+      background: #16a34a;
+      color: #fff;
+      font-size: 40px;
+      font-weight: 800;
+      padding: 28px 52px;
+      border-radius: 20px;
+      width: fit-content;
+    }
+    .url {
+      font-size: 32px;
+      font-weight: 600;
+      color: #4ade80;
+    }
+    .fine {
+      font-size: 28px;
+      color: #475569;
+    }
+  </style>
+</head>
+<body>
+<div data-composition-id="video-1" data-start="0" data-width="1080" data-height="1920">
+
+  <audio id="nar" data-start="0" data-duration="auto" data-track-index="2" src="narration.wav" data-volume="1"></audio>
+
+  <!-- SCENE 1 — HOOK -->
+  <div id="scene1" class="scene">
+    <div id="s1g1" class="glow" style="width:900px;height:900px;background:radial-gradient(circle,rgba(22,163,74,0.13) 0%,transparent 70%);top:-200px;right:-250px;"></div>
+    <div id="s1g2" class="glow" style="width:500px;height:500px;background:radial-gradient(circle,rgba(245,158,11,0.08) 0%,transparent 70%);bottom:300px;left:-80px;"></div>
+    <div id="s1-rule" style="position:absolute;top:0;left:88px;width:3px;height:100%;background:rgba(22,163,74,0.18);"></div>
+
+    <div class="scene-content">
+      <div id="s1-badge" class="badge">
+        <div style="width:10px;height:10px;background:#4ade80;border-radius:50%;"></div>
+        Para avicultores
+      </div>
+      <div id="s1-h" class="headline">
+        ¿Llevas tu granja en <span class="amber">cuadernos?</span>
+      </div>
+      <div id="s1-b" class="body-text">
+        Si tu control está en papel o en Excel, estás perdiendo dinero sin saberlo.
+      </div>
+    </div>
+  </div>
+
+  <!-- SCENE 2 — PROBLEMA -->
+  <div id="scene2" class="scene">
+    <div id="s2g1" class="glow" style="width:1000px;height:1000px;background:radial-gradient(circle,rgba(220,38,38,0.09) 0%,transparent 70%);top:200px;left:-300px;"></div>
+    <div id="s2-ghost" style="position:absolute;font-size:280px;font-weight:900;color:rgba(239,68,68,0.04);bottom:250px;right:-30px;line-height:1;font-family:'Plus Jakarta Sans',sans-serif;" data-layout-ignore>PÉRDIDA</div>
+
+    <div class="scene-content" style="gap:48px;">
+      <div id="s2-ey" class="eyebrow" style="color:#ef4444;">El problema</div>
+      <div id="s2-h" class="headline" style="font-size:96px;">
+        Cada día sin control...
+      </div>
+      <div id="s2-card" class="kpi-card" style="border-color:rgba(239,68,68,0.3);padding:48px;">
+        <div class="kpi-label" style="color:#94a3b8;">Estás perdiendo</div>
+        <div class="kpi-value" style="color:#ef4444;font-size:100px;">$$$</div>
+        <div style="font-size:32px;color:#64748b;margin-top:12px;">sin saberlo</div>
+      </div>
+      <div id="s2-b" class="body-text" style="font-size:36px;">
+        Sin datos no puedes mejorar lo que no mides.
+      </div>
+    </div>
+  </div>
+
+  <!-- SCENE 3 — SOLUCIÓN -->
+  <div id="scene3" class="scene">
+    <div id="s3g1" class="glow" style="width:1100px;height:1100px;background:radial-gradient(circle,rgba(22,163,74,0.14) 0%,transparent 70%);top:100px;right:-350px;"></div>
+    <div id="s3-ghost" style="position:absolute;font-size:240px;font-weight:900;color:rgba(22,163,74,0.04);bottom:200px;left:-20px;line-height:1;font-family:'Plus Jakarta Sans',sans-serif;" data-layout-ignore>CONTROL</div>
+
+    <div class="scene-content" style="gap:36px;">
+      <div id="s3-logo" class="logo-row">
+        <div class="logo-icon">🐔</div>
+        <div class="logo-name">MiAgro<span>Gestión</span></div>
+      </div>
+      <div id="s3-h" class="headline" style="font-size:82px;">
+        Tu <span class="green">rentabilidad</span> en tiempo real
+      </div>
+      <div id="s3-grid" class="kpi-grid">
+        <div class="kpi-card">
+          <div class="kpi-label">% Postura</div>
+          <div class="kpi-value green">91.8%</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label">Huevos/mes</div>
+          <div class="kpi-value">120K</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label">Ingresos</div>
+          <div class="kpi-value amber">$2,245</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label">Utilidad</div>
+          <div class="kpi-value green">$582</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SCENE 4 — CTA -->
+  <div id="scene4" class="scene">
+    <div id="s4g1" class="glow" style="width:1400px;height:1400px;background:radial-gradient(circle,rgba(22,163,74,0.16) 0%,transparent 70%);top:50%;left:50%;transform:translate(-50%,-50%);"></div>
+
+    <div class="scene-content" style="align-items:center;text-align:center;gap:44px;">
+      <div id="s4-logo" class="logo-row">
+        <div class="logo-icon">🐔</div>
+        <div class="logo-name">MiAgro<span>Gestión</span></div>
+      </div>
+      <div id="s4-h" class="headline" style="font-size:100px;text-align:center;">
+        <span class="green">14 días</span> completamente <span class="green">GRATIS</span>
+      </div>
+      <div id="s4-cta" class="cta-btn">Empieza ahora →</div>
+      <div id="s4-url" class="url">app.miagrogestion.com</div>
+      <div id="s4-fine" class="fine">Sin tarjeta · Cancela cuando quieras</div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+  <script>
+    window.__timelines = window.__timelines || {};
+    const tl = gsap.timeline({ paused: true });
+
+    // Ambient background glows
+    tl.to('#s1g1', { scale: 1.08, duration: 3.5, ease: 'sine.inOut', repeat: 4, yoyo: true }, 0);
+    tl.to('#s1g2', { scale: 1.06, duration: 4, ease: 'sine.inOut', repeat: 3, yoyo: true }, 0.8);
+
+    // ── Scene 1 entrances ──
+    tl.from('#s1-rule', { scaleY: 0, transformOrigin: 'top center', duration: 0.9, ease: 'power2.out' }, 0.1);
+    tl.from('#s1-badge', { x: -40, opacity: 0, duration: 0.45, ease: 'power3.out' }, 0.2);
+    tl.from('#s1-h', { y: 70, opacity: 0, duration: 0.6, ease: 'expo.out' }, 0.38);
+    tl.from('#s1-b', { y: 40, opacity: 0, duration: 0.5, ease: 'power2.out' }, 0.62);
+
+    // ── Transition 1→2: vertical push at t=3.2s ──
+    const T1 = 3.2;
+    tl.to('#scene1', { y: -1920, duration: 0.45, ease: 'power3.inOut' }, T1);
+    tl.fromTo('#scene2', { y: 1920, opacity: 1 }, { y: 0, duration: 0.45, ease: 'power3.inOut' }, T1);
+
+    // ── Scene 2 entrances ──
+    tl.from('#s2-ey', { x: -40, opacity: 0, duration: 0.4, ease: 'power3.out' }, T1 + 0.5);
+    tl.from('#s2-ghost', { x: 80, opacity: 0, duration: 0.8, ease: 'power2.out' }, T1 + 0.45);
+    tl.from('#s2-h', { y: 55, opacity: 0, duration: 0.55, ease: 'expo.out' }, T1 + 0.65);
+    tl.from('#s2-card', { scale: 0.88, opacity: 0, duration: 0.5, ease: 'back.out(1.5)' }, T1 + 0.9);
+    tl.from('#s2-b', { y: 30, opacity: 0, duration: 0.4, ease: 'power2.out' }, T1 + 1.1);
+
+    // ── Transition 2→3: vertical push at t=6.8s ──
+    const T2 = 6.8;
+    tl.to('#scene2', { y: -1920, duration: 0.45, ease: 'power3.inOut' }, T2);
+    tl.fromTo('#scene3', { y: 1920, opacity: 1 }, { y: 0, duration: 0.45, ease: 'power3.inOut' }, T2);
+
+    // ── Scene 3 entrances ──
+    tl.from('#s3-ghost', { x: 60, opacity: 0, duration: 0.8, ease: 'power2.out' }, T2 + 0.45);
+    tl.from('#s3-logo', { y: 30, opacity: 0, duration: 0.4, ease: 'power3.out' }, T2 + 0.55);
+    tl.from('#s3-h', { y: 55, opacity: 0, duration: 0.55, ease: 'expo.out' }, T2 + 0.72);
+    tl.from('#s3-grid', { y: 60, opacity: 0, duration: 0.55, ease: 'power3.out' }, T2 + 0.95);
+
+    // ── Transition 3→4: blur crossfade at t=12.8s ──
+    const T3 = 12.8;
+    tl.to('#scene3', { opacity: 0, filter: 'blur(14px)', duration: 0.5, ease: 'sine.inOut' }, T3);
+    tl.fromTo('#scene4', { opacity: 0 }, { opacity: 1, duration: 0.5, ease: 'sine.inOut' }, T3 + 0.12);
+
+    // ── Scene 4 entrances ──
+    tl.from('#s4-logo', { scale: 0.82, opacity: 0, duration: 0.45, ease: 'back.out(1.4)' }, T3 + 0.62);
+    tl.from('#s4-h', { y: 65, opacity: 0, duration: 0.6, ease: 'expo.out' }, T3 + 0.82);
+    tl.from('#s4-cta', { scale: 0.82, opacity: 0, duration: 0.45, ease: 'back.out(1.8)' }, T3 + 1.2);
+    tl.from('#s4-url', { y: 22, opacity: 0, duration: 0.38, ease: 'power2.out' }, T3 + 1.5);
+    tl.from('#s4-fine', { y: 18, opacity: 0, duration: 0.32, ease: 'power2.out' }, T3 + 1.72);
+
+    // visibility kills after opacity exits
+    tl.set('#scene3', { visibility: 'hidden' }, 13.3);
+    tl.set('#scene4', { visibility: 'hidden' }, 17.2);
+
+    // ── Final fade ──
+    tl.to('#scene4', { opacity: 0, duration: 0.7, ease: 'sine.inOut' }, 16.5);
+
+    window.__timelines['video-1'] = tl;
+  </script>
+</div>
+</body>
+</html>

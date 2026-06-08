@@ -68,6 +68,17 @@ Target keywords: `software granja avícola`, `control postura gallinas ponedoras
 - Custom color scales `brand` and `egg` defined in `tailwind.config.mjs`
 - All text in Latin American Spanish (`lang="es-419"`)
 
+## Video Content (Social Media)
+
+Para crear videos MP4 para redes sociales, leer primero: **`videos/DOCS.md`**
+
+Contiene: setup del venv TTS, comandos HyperFrames, design system, los 3 videos ya hechos, checklist de composición nueva, tipos de video disponibles y plan de 12 semanas.
+
+Comando crítico antes de cualquier TTS:
+```bash
+source /Users/kambista/.local/share/hyperframes-tts/bin/activate
+```
+
 ## Key Constraints
 
 - No JS frameworks — keep it pure Astro (zero hydration)

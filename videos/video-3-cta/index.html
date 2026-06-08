@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="es-419">
+<head>
+  <meta charset="UTF-8" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      width: 1080px;
+      height: 1920px;
+      overflow: hidden;
+      background: #0d1f16;
+      font-family: 'Poppins', sans-serif;
+    }
+    .scene {
+      position: absolute;
+      top: 0; left: 0;
+      width: 1080px;
+      height: 1920px;
+      overflow: hidden;
+      background: #0d1f16;
+    }
+    #scene2, #scene3 { opacity: 0; }
+
+    .scene-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+      padding: 130px 88px;
+      gap: 44px;
+      box-sizing: border-box;
+    }
+    .glow {
+      position: absolute;
+      border-radius: 50%;
+      pointer-events: none;
+    }
+    .eyebrow {
+      font-size: 30px;
+      font-weight: 700;
+      color: #16a34a;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+    .headline {
+      font-size: 108px;
+      font-weight: 900;
+      color: #f8fafc;
+      line-height: 1.0;
+      max-width: 900px;
+    }
+    .headline .green { color: #16a34a; }
+    .headline .amber { color: #f59e0b; }
+    .big-number {
+      font-size: 200px;
+      font-weight: 900;
+      color: #16a34a;
+      font-variant-numeric: tabular-nums;
+      line-height: 0.9;
+    }
+    .body-text {
+      font-size: 42px;
+      font-weight: 500;
+      color: #94a3b8;
+      line-height: 1.45;
+      max-width: 880px;
+    }
+    .price-card {
+      background: #1e3a2e;
+      border: 2px solid rgba(22,163,74,0.35);
+      border-radius: 28px;
+      padding: 52px 56px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .price-from {
+      font-size: 30px;
+      font-weight: 600;
+      color: #64748b;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+    .price-main {
+      font-size: 130px;
+      font-weight: 900;
+      color: #f8fafc;
+      font-variant-numeric: tabular-nums;
+      line-height: 1;
+    }
+    .price-main span { color: #16a34a; }
+    .price-period {
+      font-size: 40px;
+      font-weight: 600;
+      color: #94a3b8;
+    }
+    .check-list {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+    .check-item {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      font-size: 36px;
+      font-weight: 500;
+      color: #cbd5e1;
+    }
+    .check-icon {
+      width: 36px; height: 36px;
+      background: rgba(22,163,74,0.2);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 18px;
+      flex-shrink: 0;
+      color: #4ade80;
+    }
+    .logo-row {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+    }
+    .logo-icon {
+      width: 72px; height: 72px;
+      background: #16a34a;
+      border-radius: 18px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 38px;
+    }
+    .logo-name {
+      font-size: 44px;
+      font-weight: 800;
+      color: #f8fafc;
+    }
+    .logo-name span { color: #4ade80; }
+    .cta-btn {
+      background: #16a34a;
+      color: #fff;
+      font-size: 44px;
+      font-weight: 800;
+      padding: 32px 56px;
+      border-radius: 22px;
+      width: fit-content;
+    }
+    .url {
+      font-size: 32px;
+      font-weight: 600;
+      color: #4ade80;
+    }
+    .social-proof {
+      font-size: 30px;
+      color: #475569;
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+<div data-composition-id="video-3" data-start="0" data-width="1080" data-height="1920">
+
+  <audio id="nar" data-start="0" data-duration="auto" data-track-index="2" src="narration.wav" data-volume="1"></audio>
+
+  <!-- SCENE 1 — 14 DÍAS GRATIS -->
+  <div id="scene1" class="scene">
+    <div id="s1g1" class="glow" style="width:1200px;height:1200px;background:radial-gradient(circle,rgba(22,163,74,0.18) 0%,transparent 70%);top:50%;left:50%;transform:translate(-50%,-50%);"></div>
+    <div id="s1-ghost" style="position:absolute;font-size:220px;font-weight:900;color:rgba(22,163,74,0.04);bottom:160px;right:-30px;line-height:1;font-family:'Plus Jakarta Sans',sans-serif;" data-layout-ignore>GRATIS</div>
+
+    <div class="scene-content" style="align-items:flex-start;gap:40px;">
+      <div id="s1-ey" class="eyebrow">Oferta de lanzamiento</div>
+      <div id="s1-days" class="big-number">14</div>
+      <div id="s1-h" class="headline" style="font-size:96px;">
+        días completamente <span class="green">GRATIS</span>
+      </div>
+      <div id="s1-checks" class="check-list">
+        <div class="check-item" id="c1">
+          <div class="check-icon">✓</div>
+          Todas las funcionalidades activas
+        </div>
+        <div class="check-item" id="c2">
+          <div class="check-icon">✓</div>
+          Sin tarjeta de crédito
+        </div>
+        <div class="check-item" id="c3">
+          <div class="check-icon">✓</div>
+          Cancela cuando quieras
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SCENE 2 — PRECIO -->
+  <div id="scene2" class="scene">
+    <div id="s2g1" class="glow" style="width:900px;height:900px;background:radial-gradient(circle,rgba(245,158,11,0.08) 0%,transparent 70%);top:200px;right:-200px;"></div>
+    <div id="s2g2" class="glow" style="width:700px;height:700px;background:radial-gradient(circle,rgba(22,163,74,0.1) 0%,transparent 70%);bottom:300px;left:-150px;"></div>
+
+    <div class="scene-content" style="gap:36px;">
+      <div id="s2-ey" class="eyebrow">Precio</div>
+      <div id="s2-h" class="headline" style="font-size:76px;">
+        Desde solo
+      </div>
+      <div id="s2-price" class="price-card">
+        <div class="price-from">Plan Productor</div>
+        <div style="display:flex;align-items:flex-end;gap:12px;">
+          <div class="price-main"><span>$12</span></div>
+          <div class="price-period">/mes</div>
+        </div>
+        <div style="font-size:28px;color:#64748b;">USD · Sin contratos anuales</div>
+      </div>
+      <div id="s2-b" class="body-text" style="font-size:36px;">
+        Menos de lo que cuesta una visita al veterinario.
+      </div>
+    </div>
+  </div>
+
+  <!-- SCENE 3 — SOCIAL PROOF + CTA -->
+  <div id="scene3" class="scene">
+    <div id="s3g1" class="glow" style="width:1400px;height:1400px;background:radial-gradient(circle,rgba(22,163,74,0.17) 0%,transparent 70%);top:50%;left:50%;transform:translate(-50%,-50%);"></div>
+
+    <div class="scene-content" style="align-items:center;text-align:center;gap:44px;">
+      <div id="s3-logo" class="logo-row">
+        <div class="logo-icon">🐔</div>
+        <div class="logo-name">MiAgro<span>Gestión</span></div>
+      </div>
+      <div id="s3-h" class="headline" style="text-align:center;font-size:82px;">
+        El software de los avicultores más <span class="green">rentables</span>
+      </div>
+      <div id="s3-proof" class="social-proof">
+        Ya disponible en toda Latinoamérica
+      </div>
+      <div id="s3-cta" class="cta-btn">Empieza hoy gratis →</div>
+      <div id="s3-url" class="url">app.miagrogestion.com</div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+  <script>
+    window.__timelines = window.__timelines || {};
+    const tl = gsap.timeline({ paused: true });
+
+    // Ambient
+    tl.to('#s1g1', { scale: 1.08, duration: 3.5, ease: 'sine.inOut', repeat: 3, yoyo: true }, 0);
+
+    // ── Scene 1 entrances ──
+    tl.from('#s1-ey', { x: -40, opacity: 0, duration: 0.4, ease: 'power3.out' }, 0.15);
+    tl.from('#s1-days', { y: 80, opacity: 0, scale: 0.85, duration: 0.6, ease: 'expo.out' }, 0.32);
+    tl.from('#s1-h', { y: 55, opacity: 0, duration: 0.55, ease: 'power3.out' }, 0.58);
+    tl.from('#c1', { x: -45, opacity: 0, duration: 0.4, ease: 'power3.out' }, 0.82);
+    tl.from('#c2', { x: -45, opacity: 0, duration: 0.4, ease: 'power3.out' }, 0.94);
+    tl.from('#c3', { x: -45, opacity: 0, duration: 0.4, ease: 'power3.out' }, 1.06);
+    tl.from('#s1-ghost', { x: 60, opacity: 0, duration: 0.8, ease: 'power2.out' }, 0.25);
+
+    // ── Transition 1→2: vertical push at t=3.5s ──
+    const T1 = 3.5;
+    tl.to('#scene1', { y: -1920, duration: 0.45, ease: 'power3.inOut' }, T1);
+    tl.fromTo('#scene2', { y: 1920, opacity: 1 }, { y: 0, duration: 0.45, ease: 'power3.inOut' }, T1);
+
+    // ── Scene 2 entrances ──
+    tl.from('#s2-ey', { x: -40, opacity: 0, duration: 0.4, ease: 'power3.out' }, T1 + 0.5);
+    tl.from('#s2-h', { y: 50, opacity: 0, duration: 0.5, ease: 'expo.out' }, T1 + 0.65);
+    tl.from('#s2-price', { scale: 0.9, opacity: 0, duration: 0.55, ease: 'back.out(1.4)' }, T1 + 0.88);
+    tl.from('#s2-b', { y: 30, opacity: 0, duration: 0.4, ease: 'power2.out' }, T1 + 1.15);
+
+    // ── Transition 2→3: blur crossfade at t=7.5s ──
+    const T2 = 7.5;
+    tl.to('#scene2', { opacity: 0, filter: 'blur(12px)', duration: 0.5, ease: 'sine.inOut' }, T2);
+    tl.fromTo('#scene3', { opacity: 0 }, { opacity: 1, duration: 0.5, ease: 'sine.inOut' }, T2 + 0.12);
+
+    // ── Scene 3 entrances ──
+    tl.from('#s3-logo', { scale: 0.82, opacity: 0, duration: 0.45, ease: 'back.out(1.4)' }, T2 + 0.62);
+    tl.from('#s3-h', { y: 65, opacity: 0, duration: 0.6, ease: 'expo.out' }, T2 + 0.82);
+    tl.from('#s3-proof', { y: 25, opacity: 0, duration: 0.4, ease: 'power2.out' }, T2 + 1.1);
+    tl.from('#s3-cta', { scale: 0.82, opacity: 0, duration: 0.45, ease: 'back.out(1.8)' }, T2 + 1.35);
+    tl.from('#s3-url', { y: 22, opacity: 0, duration: 0.38, ease: 'power2.out' }, T2 + 1.65);
+
+    // visibility kills after opacity exits
+    tl.set('#scene2', { visibility: 'hidden' }, 8.0);
+    tl.set('#scene3', { visibility: 'hidden' }, 12.9);
+
+    // ── Final fade ──
+    tl.to('#scene3', { opacity: 0, duration: 0.7, ease: 'sine.inOut' }, 12.2);
+
+    window.__timelines['video-3'] = tl;
+  </script>
+</div>
+</body>
+</html>

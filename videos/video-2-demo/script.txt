@@ -1,0 +1,1 @@
+Así se ve MiAgroGestión por dentro. Un dashboard con todo lo que necesitas: porcentaje de postura en tiempo real, producción diaria, ingresos del mes, utilidad por lote, y alertas automáticas cuando el stock baja. Todo desde tu celular, en menos de treinta segundos al día.
